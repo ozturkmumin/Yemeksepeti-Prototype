@@ -18,20 +18,11 @@
   </head>
   <body>
     <header>
-      <div class="header-first">
-        <div class="container">
-          <div
-            class="d-flex justify-content-center align-items-center header-img-settings"
-          >
-            <img class="" src="assets/img/header/image.svg" alt="" />
-          </div>
-        </div>
-      </div>
       <div class="me-4">
         <div class="row">
           <div class="col-lg-8">
             <img
-              class="p-3 ms-3"
+              class="p-3 ms-2"
               src="assets/img/header/yemeksepeti.svg"
               alt=""
             />
@@ -61,10 +52,49 @@
             <div class="row">
               <div class="hero-section">
                 <h1>
-                  Yemek, market ve günlük tüm ihtiyaçların için  adresini seç,
+                  Yemek, market ve günlük tüm ihtiyaçların için adresini seç,
                   çevrendeki seçenekleri gör!
                 </h1>
               </div>
+            </div>
+            <div class="input-container">
+              <form
+                class="d-flex justify-content-center location-form restaurants-search-form is-full-adress"
+              >
+                <div class="address-search-container">
+                  <div
+                    class="validation-wrapper input-box js-input-box sr js-input-box big"
+                  >
+                    <input
+                      type="text"
+                      class="restaurant-search-form_input restaurant-location-input"
+                      id="delivery-information-postal-index"
+                    />
+                    <label
+                      for="delivery-information-postal-index"
+                      class="msg-title"
+                      >Adresini Belirle veya Seç</label
+                    >
+                    <button
+                      class="button status-default map-closed locate-me-btn d-flex align-items-center p-2"
+                    >
+                      <span class="sr-only">Locate me</span>
+                      <img src="assets/img/content/image.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+                <div class="button-container two-buttons">
+                  <button
+                    class="button restaurants-search-form__button js-restaurants-search-submit restaurants-search-form__button--full js-restaurants-search-button gtm-homepage-delivery-button restaurants-search-form__button--flexible js-ripple"
+                  ></button>
+                  <button
+                    class="button restaurants-search-form__button js-restaurants-search-pickup js-restaurants-search-button gtm-homepage-pickup-button js-ripple"
+                  ></button>
+                  <button
+                    class="button js-restaurants-search-submit restaurants-search-form__button--reduced gtm-homepage-delivery-button restaurants-search-form__button js-ripple"
+                  ></button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@
 html,
 body {
   height: 100%;
-  font-family: "Open Sans","Arial,sans-serif";
+  font-family: "Open Sans", "Arial,sans-serif";
   font-size: 16px;
   font-weight: normal;
 }
@@ -35,64 +35,163 @@ body {
   border-color: transparent;
   transition: none;
 
-
   a {
     color: #707070;
     font-size: 12px;
-   
   }
 }
-.men-svg{
+.men-svg {
   font-size: 12px;
   font-weight: bold;
 }
 
-.section-one{
-.banner-img{
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("../img/banner/hero.jpg");
-  background-position: 150%;
-  background-size:contain;
-  @media screen and (min-width:$screenlg) {
-    background-position: 100%;
-
+.section-one {
+  .banner-img {
+    content: "";
+    background-repeat: no-repeat;
+    background-image: url("../img/banner/hero.jpg");
+    background-position: 150%;
+    background-size: contain;
+    @media screen and (min-width: $screenlg) {
+      background-position: 100%;
+    }
+    @media screen and (min-width: $screensm) and (max-width: $screenlg) {
+      background-position: 130%;
+      max-height: 280px;
+    }
+    @media screen and (max-width: $screensm) {
+      background-position: 100%;
+      max-height: 270px;
+    }
   }
-  @media screen and (min-width:$screensm) and (max-width:$screenlg) {
-    background-position: 130%;
-    max-height: 280px;
-  }
-  @media screen  and (max-width:$screensm) {
-    background-position: 100%;
-    max-height: 270px;
-  }
-  
-} 
-.hero-section{
-  padding: 160px 0 48px 0;
-  max-width: 70%;
-  @media screen and (min-width:$screenlg) {
+  .hero-section {
     padding: 160px 0 48px 0;
-
+    max-width: 70%;
+    @media screen and (min-width: $screenlg) {
+      padding: 160px 0 48px 0;
+    }
+    @media screen and (min-width: $screensm) and (max-width: $screenlg) {
+      padding: 80px 0 24px 0;
+    }
+    @media screen and (max-width: $screensm) {
+      padding: 0;
+    }
+    h1 {
+      line-height: 1.4;
+      font-size: 40px;
+      color: #333333;
+      @media screen and (min-width: $screenxs) and (max-width: $screensm) {
+        font-size: 34px;
+      }
+      @media screen and (max-width: $screenxs) {
+        font-size: 28px;
+      }
+    }
   }
-  @media screen and (min-width:$screensm) and (max-width:$screenlg) {
-    padding: 80px 0 24px 0;
-  }
-  @media screen  and (max-width:$screensm) {
+  .input-container {
+    max-width: 960px;
     padding: 0;
-   
-  }
-  h1{
-    line-height: 1.4;
-    font-size: 40px;
-    color: #333333;
-    @media screen  and (min-width:$screenxs) and (max-width:$screensm) {
-      font-size: 34px;
+    form {
+      margin: 0;
+      @media screen and (min-width: 768px) {
+        flex-wrap: nowrap;
+        background-color: $white;
+        padding: 16px;
+      }
     }
-    @media screen  and (max-width:$screenxs) {
-      font-size: 28px;
+    .location-form {
+      max-width: 960px;
+      box-shadow: 0 0.3rem 2rem #f7f7f7;
+      .address-search-container {
+        flex: 1 1 auto;
+      }
+      .validation-wrapper {
+        margin: 0;
+        flex: auto;
+        box-shadow: none;
+        button {
+          font-size: 0;
+          position: absolute;
+          background-color: #fff;
+          top: 32px;
+          transform: translateY(-50%);
+          right: 1px;
+          z-index: 1;
+          border: none;
+          .sr-only {
+            border: 0 !important;
+            clip: rect(1px, 1px, 1px, 1px) !important;
+            clip-path: inset(50%) !important;
+            height: 1px !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            position: absolute !important;
+            width: 1px !important;
+            white-space: nowrap !important;
+          }
+        }
+      }
+      .input-box {
+        input {
+          height: 64px;
+          padding-right: 55px;
+          font-size: 1.4rem;
+          font-weight: 300;
+          transition: all 150ms;
+          display: block;
+          width: 100%;
+          position: relative;
+          z-index: 1;
+          line-height: 1em;
+          padding: 12px 15px;
+          border: 1px solid #dcdcdc;
+          border-radius: 8px;
+          box-sizing: border-box;
+          background-color: #fff;
+          color: #333;
+          font-weight: 300;
+          resize: none;
+        }
+      }
+      .big {
+        position: relative;
+        .msg-title {
+          top: 2.5rem;
+
+          font-size: 1.4rem;
+          font-weight: 300;
+          transition: all 150ms;
+          transform-origin: center left;
+          transform: translateY(0) scale(1);
+          position: absolute;
+          margin: 0;
+          padding: 0 3px;
+          top: 1.7rem;
+          left: 15px;
+          color: #707070;
+          z-index: 2;
+          pointer-events: none;
+          line-height: 1.3;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: calc(100% - 32px);
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            z-index: -1;
+          }
+        }
+      }
     }
-   
+    .two-buttons {
+      flex: 0 1 360px;
+    }
   }
-}
 }
