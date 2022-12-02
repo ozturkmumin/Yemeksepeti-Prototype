@@ -1,0 +1,18 @@
+{
+  "name": "",
+  "description": "",
+  "main": "Gruntfile.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+  ],
+  "private": true,
+  "authors": [
+    ""
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

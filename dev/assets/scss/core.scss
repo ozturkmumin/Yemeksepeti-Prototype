@@ -1,0 +1,98 @@
+// = IMPORT
+@import "css3-mixins";
+@import "../fonts/fonts";
+@import "./bootstrap/bootstrap";
+@import "reset";
+@import "variables.scss";
+
+//------------------------------------------------------------
+// = CUSTOM VARIABLES
+//------------------------------------------------------------
+
+html,
+body {
+  height: 100%;
+  font-family: "Open Sans","Arial,sans-serif";
+  font-size: 16px;
+  font-weight: normal;
+}
+
+//------------------------------------------------------------
+// = MAIN
+//------------------------------------------------------------
+.header-first {
+  background-color: #fa0050;
+  height: 64px;
+  .header-img-settings {
+    height: 64px;
+    img {
+      width: 48px;
+      height: 38px;
+    }
+  }
+}
+.language-switch {
+  border-color: transparent;
+  transition: none;
+
+
+  a {
+    color: #707070;
+    font-size: 12px;
+   
+  }
+}
+.men-svg{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.section-one{
+.banner-img{
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("../img/banner/hero.jpg");
+  background-position: 150%;
+  background-size:contain;
+  @media screen and (min-width:$screenlg) {
+    background-position: 100%;
+
+  }
+  @media screen and (min-width:$screensm) and (max-width:$screenlg) {
+    background-position: 130%;
+    max-height: 280px;
+  }
+  @media screen  and (max-width:$screensm) {
+    background-position: 100%;
+    max-height: 270px;
+  }
+  
+} 
+.hero-section{
+  padding: 160px 0 48px 0;
+  max-width: 70%;
+  @media screen and (min-width:$screenlg) {
+    padding: 160px 0 48px 0;
+
+  }
+  @media screen and (min-width:$screensm) and (max-width:$screenlg) {
+    padding: 80px 0 24px 0;
+  }
+  @media screen  and (max-width:$screensm) {
+    padding: 0;
+   
+  }
+  h1{
+    line-height: 1.4;
+    font-size: 40px;
+    color: #333333;
+    @media screen  and (min-width:$screenxs) and (max-width:$screensm) {
+      font-size: 34px;
+    }
+    @media screen  and (max-width:$screenxs) {
+      font-size: 28px;
+    }
+   
+  }
+}
+}
